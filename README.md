@@ -34,14 +34,9 @@ alias swagger='docker run --rm -it -v $HOME:/root -v /home/sandy/go/src/my_org:/
 ### 初期化
 
 ```
-docker pull swaggerapi/swagger-editor
-docker run -d -p 80:8080 swaggerapi/swagger-editor
+docker-compose up -d api-doc
 
-
-// ローカルyml使って起動
-docker run -d -p 80:8080 -v $(pwd):/tmp -e SWAGGER_FILE=/tmp/swagger.yml swaggerapi/swagger-editor
-
-http://localhost/
+http://localhost:8088/
 ```
 
 ### vscode 拡張機能
